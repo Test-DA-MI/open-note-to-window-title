@@ -62,8 +62,7 @@ export default class ActiveNoteTitlePlugin extends Plugin {
   // Debounced refreshTitle
   debouncedRefreshTitle = debounce((file?: TFile) => {
     this.refreshTitle(file ?? this.currentFile);
-    this.currentFile = null;
-  }, 500, false);
+  }, 300, false);
 
   // The main method that is responsible for updating the title
   refreshTitle(file?: TFile): void {
